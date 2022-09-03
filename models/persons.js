@@ -5,10 +5,10 @@ const url = process.env.MONGODB_URI
 console.log('connecting to', url)
 
 mongoose.connect(url)
-    .then(result => {
+    .then(() => {
         console.log('connected to MongoDb')
     })
-    .catch(error =>{
+    .catch(error => {
         console.log('error connecting to MongoDb:', error.message)
     })
 
@@ -29,7 +29,7 @@ const personSchema = new mongoose.Schema({
         },
         required: true
     }
-}) 
+})
 
 personSchema.set('toJSON', {
     transform: (document, returnedObject) => {

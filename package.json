@@ -10,7 +10,8 @@
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail",
-    "asdf": "rm -rf build"
+    "lint" : "eslint ."
+
   },
   "author": "Chan",
   "license": "MIT",
@@ -22,6 +23,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-plugin-react": "^7.31.4",
     "nodemon": "^2.0.19"
   },
   "description": ""
